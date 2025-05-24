@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Jalal - Komentar</title>
+  <style>
+    #komentar {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selamat datang di Blog Jalal</h1>
+  <p>Ini adalah artikel terbaru kami.</p>
+
+  <button onclick="toggleKomentar()">Tampilkan Komentar</button>
+
+  <div id="komentar">
+    <h3>Komentar</h3>
+    <p>Ini komentar pertama.</p>
+    <p>Ini komentar kedua.</p>
+  </div>
+
+  <script>
+    function toggleKomentar() {
+      const komentar = document.getElementById('komentar');
+      const tombol = document.querySelector('button');
+      if (komentar.style.display === 'none') {
+        komentar.style.display = 'block';
+        tombol.textContent = 'Sembunyikan Komentar';
+      } else {
+        komentar.style.display = 'none';
+        tombol.textContent = 'Tampilkan Komentar';
+      }
+    }
+  </script>
+</body>
+</html>
+
